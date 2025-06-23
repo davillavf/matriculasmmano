@@ -1,0 +1,81 @@
+/* Sidebar */
+.sidebar {
+    background: #2ecc71;
+    color: white;
+    width: 300px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 200px;
+}
+
+/* Navigation Buttons */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn-green {
+    background: #2ecc71;
+    color: white;
+    padding: 1rem 2rem;
+    border: 2px dashed white;
+    border-radius: 25px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-green img {
+    width: 24px;
+    margin-left: 10px;
+    opacity: 0.7;
+}
+
+.btn-green:hover {
+    background: #27ae60;
+}
+
+/* Content */
+.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.welcome-text {
+    color: #2ecc71;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .main-nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem 0;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+}
