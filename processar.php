@@ -9,7 +9,7 @@ if (
     die('Dados incompletos para salvar no banco.');
 }
 
-// Conexão banco (ajuste suas credenciais)
+// Conexão banco
 $host = 'localhost';
 $db   = 'escola_db';
 $user = 'root';
@@ -68,10 +68,10 @@ try {
 
     session_destroy();
 
-    // Redireciona para gerar_pdf passando o id via GET
     header("Location: gerar_pdf.php?id=$ultimoId");
     exit;
 
 } catch (PDOException $e) {
     die('Erro ao salvar no banco: ' . $e->getMessage());
 }
+
