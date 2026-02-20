@@ -3,10 +3,9 @@ include("header.php");
 include("conexao.php");
 
 // Consulta SQL
-$sql = "SELECT * FROM matriculas"; // Altere se sua tabela tiver outro nome
+$sql = "SELECT * FROM matriculas"; 
 $result = mysqli_query($conn, $sql);
 
-// Verificação de erro na consulta
 if (!$result) {
     die("Erro na consulta: " . mysqli_error($conn));
 }
@@ -125,3 +124,4 @@ if (!$result) {
 </div>
 
 <?php include("footer.php"); ?>
+
