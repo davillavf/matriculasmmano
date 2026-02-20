@@ -1,5 +1,5 @@
 <?php
-session_start(); // Start session at the very top [[4]]
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,7 @@ session_start(); // Start session at the very top [[4]]
 <head>
     <meta charset="UTF-8">
     <title>Sistema de matrículas</title>
-    <link rel="stylesheet" href="styles.css"> <!-- External stylesheet [[1]] -->
+    <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
@@ -77,10 +77,9 @@ body {
     margin-bottom: 3rem;
 }
 
-/* Buttons */
 .btn-green {
     background: #2ecc71;
-    color: black; /* Black text as requested [[8]] */
+    color: black;
     padding: 1rem 2rem;
     border-radius: 25px;
     font-size: 16px;
@@ -91,23 +90,22 @@ body {
 .btn-green img {
     width: 24px;
     margin-left: 10px;
-    opacity: 1; /* Ensure icons are fully visible with black text */
+    opacity: 1; 
 }
 
 .main-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Use flex for alignment [[3]][[4]] */
+    display: flex; 
     flex-direction: column;
-    align-items: center; /* Center buttons vertically */
-    gap: 1rem; /* Add spacing between buttons */
+    align-items: center;
+    gap: 1rem; 
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .main-nav ul {
-        justify-content: space-around; /* Distribute buttons evenly [[6]] */
+        justify-content: space-around; 
     }
 
     .footer {
@@ -128,4 +126,5 @@ body {
 }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
 </html>
