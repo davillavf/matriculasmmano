@@ -28,18 +28,15 @@ function trata($txt) {
 $pdf = new FPDF('P', 'mm', 'A4');
 $pdf->AddPage();
 
-// === Adiciona LOGO ===
 if (file_exists('escola.png')) {
     $pdf->Image('escola.png', 80, 10, 50); // (arquivo, x, y, largura)
 }
-$pdf->Ln(35); // Espaço após logo
+$pdf->Ln(35); 
 
-// Título
 $pdf->SetFont('Arial', 'B', 14);
 $pdf->Cell(0, 10, trata('FICHA DE MATRÍCULA 2026'), 0, 1, 'C');
 $pdf->Ln(3);
 
-// Funções auxiliares
 function secao($pdf, $titulo) {
     $pdf->SetFont('Arial', 'B', 12);
     $pdf->SetFillColor(56, 183, 122);
@@ -56,7 +53,6 @@ function linhaCampo($pdf, $campo, $valor) {
     $pdf->MultiCell(130, 8, trata($valor));
 }
 
-// 1. Dados Pessoais
 secao($pdf, '1. Dados Pessoais');
 $dadosPessoais = [
     'Nome completo' => $dados['nome'],
@@ -83,7 +79,6 @@ foreach ($dadosPessoais as $campo => $valor) {
 }
 $pdf->Ln(2);
 
-// 2. Questionário Socioeconômico
 secao($pdf, '2. Questionário Socioeconômico');
 $dadosSocio = [
     'Mora com' => $dados['mora_com'],
@@ -103,7 +98,6 @@ foreach ($dadosSocio as $campo => $valor) {
 }
 $pdf->Ln(2);
 
-// 3. Saúde
 secao($pdf, '3. Questionário de Saúde');
 $dadosSaude = [
     'Possui deficiência?' => $dados['deficiencia'],
@@ -125,3 +119,4 @@ $pdf->Cell(0, 10, trata('Documento gerado automaticamente pelo Sistema de Matrí
 
 $pdf->Output();
 ?>
+
